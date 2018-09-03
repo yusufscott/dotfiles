@@ -115,3 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+*Variables*
+***********
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
