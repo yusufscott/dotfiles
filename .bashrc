@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-*Variables*
-***********
+# Variables #
+#############
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
