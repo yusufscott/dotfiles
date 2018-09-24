@@ -2,8 +2,9 @@
 """""""""""""""
 
 set nocompatible
-filetype off
 set encoding=utf-8
+filetype off
+highlight BadWhitespace ctermbg=red
 
 " Interface Setup "
 """""""""""""""""""
@@ -28,19 +29,25 @@ set splitright
 
 " Python
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+    \ match BadWhitespace /\s\+$/
 
 " Web Dev
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
     \ set shiftwidth=2
+
+" C
+au BufRead,BufNewFile *.c,*.h
+    \ set tabstop=2
+    \ match BadWhitespace /\s\+$/
 
 " Navigation "
 """"""""""""""
@@ -57,9 +64,6 @@ nnoremap <C-H> <C-W><C-H>
 " Enable syntax highlighting
 let python_highlight_all=1
 syntax enable
-
-" Flag Whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Enable folding
 set foldmethod=indent
