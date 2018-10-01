@@ -5,8 +5,9 @@ Music
 Pictures
 Public
 Templates
-testbench
+testbench/*
 Videos
+workbench/*
 .ICEauthority
 .bash_history
 .cache
