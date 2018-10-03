@@ -72,15 +72,6 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-" virtualenv support
-python3<<EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate = os.path.join(project_base_dir, 'bin/activate')
-    exec(". " + activate)
-EOF
 
 " Vundle Settings "
 """""""""""""""""""
@@ -105,6 +96,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'plytophogy/vim-virtualenv'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
