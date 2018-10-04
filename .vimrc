@@ -24,6 +24,9 @@ set autoindent
 set splitbelow
 set splitright
 
+" Status bar
+set laststatus=2
+
 " File Specific "
 """""""""""""""""
 
